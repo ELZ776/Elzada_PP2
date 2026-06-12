@@ -7,3 +7,8 @@ z = 2 + 4j
 print(type(x))
 print(type(y))
 print(type(z))
+
+#random numbers
+import random
+
+print(random.randrange(1, 10))
