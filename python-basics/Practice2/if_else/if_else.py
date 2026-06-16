@@ -32,3 +32,15 @@ if number % 2 == 0:
 else:
     print("Odd")
 
+age = 10
+if age > 0:
+    if age < 6:
+        print("You are in preschool.")
+    else:
+        if age <= 12:
+            print("You are in primary school.")
+        else:
+            if age <= 18:
+                print("You are in high school.")
+            else:
+                print("You are an adult.")

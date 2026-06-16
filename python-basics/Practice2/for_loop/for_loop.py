@@ -1,19 +1,15 @@
-a = 5
-b = 2
-if a > b: print("a is a greater than b")
+subjects = ["Math", "Physics", "Python"]
+for subject in subjects:
+    print("I study", subject)
 
-a = 2
-b = 330
-print("A") if a > b else print("B")
+word = "banana"
+for letter in word:
+    print(letter)
 
-x = 15
-y = 20
-max_value = x if x > y else y
-print(max_value)
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
 
-score = 95
-print("Grade: A" if score >= 90 else
-      "Grade: B" if score >= 80 else
-      "Grade: C" if score >= 70 else
-      "Grade: D" if score >= 60 else
-      "Grade: F")
+colors = ["red", "green", "blue"]
+for color in colors:
+    print("Color:", color)
