@@ -1,16 +1,14 @@
-import shutil
+# remove deletes the file
 import os
-#1 holder delete
-import shutil
-shutil.rmtree("folder_to_delete")
-#2 copy,then delete file
-shutil.move("new_file1.txt", "new_file2.txt")
-# 3 copy file
-shutil.copy("new_file1.txt","new_file.txt")
-print("File succesfully copied")
-# 4 remove file
-if os.path.exists("new_file1.txt"):
-    os.remove("new_file1.txt")
-    print("'new_file1.txt' was removed")
-#5 copy holder
-shutil.copytree("my_folder", "backup_folder")
+os.remove("demofile.txt")
+
+# delete the file
+import os
+if os.path.exists("demofile.txt"):
+    os.remove("demofile.txt")
+else:
+    print("The file does not exist")
+
+# rmdir deletes an empty folder
+import os
+os.rmdir("myfolder")

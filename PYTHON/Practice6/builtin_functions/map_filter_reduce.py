@@ -1,22 +1,19 @@
-from functools import reduce
-# 1 map
-lst = [2,4,6]
-a = list(map(lambda x:x**x,lst))
-print(a)
-# 2
-lst1 = [3,9,27,282,93,4,5]
-b = list(filter(lambda x:x%3 == 0,lst1))
-print(b)
-# 3
-a = ["Elzada", "want", "4.00 GPA"]
-r = reduce(lambda x, y: x + "_" + y, a)
-print(r)
-# 4
-nums = ['234','567','789']
-c = list(map(int,nums))
-for i in c:
-    print(f'{i} - {type(i)}')
-# 5
-lst = [1,2,3]
-a = list(map(lambda x:x*3,lst))
-print(a)
+# map() applies a function to each item in a list
+numbers = [1, 2, 3, 4, 5]
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+
+# map() can change every string in a list
+words = ["apple", "banana", "cherry"]
+result = list(map(lambda word: word.upper(), words))
+print(result)
+
+# filter() keeps only items that satisfy the condition
+numbers = [1, 2, 3, 4, 5, 6]
+result = list(filter(lambda x: x % 2 == 0, numbers))
+print(result)
+
+# filter() keeps only words longer than 5 letters
+words = ["cat", "elephant", "dog", "python", "sun"]
+result = list(filter(lambda word: len(word) > 5, words))
+print(result)

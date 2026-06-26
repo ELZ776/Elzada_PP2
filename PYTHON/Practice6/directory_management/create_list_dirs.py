@@ -1,13 +1,25 @@
-import os
-# 1 get path to directory
-print(os.getcwd())
-# 2 change directory
-os.chdir(r'C:\Users\Админ\Desktop\pp2 labs\Practice6\lab6')
-print(os.getcwd())
-# 3 make/create dire
-os.mkdir('new_folder')
-# 4 mare/create some level dire
-os.makedirs('first_level/second_level/third_level')
-# 5 show all files in path('.' means current directory)
-contents = os.listdir('.')
-print(contents)
+# pathlib is used to work with files and folders
+from pathlib import Path
+# create nested directories: main_folder/sub_folder/files
+path = Path("main_folder/sub_folder/files")
+path.mkdir(parents=True, exist_ok=True)
+print("Nested directories created successfully")
+
+from pathlib import Path
+
+# choose current directory
+path = Path(".")
+# iterate through all items in the directory
+for item in path.iterdir():
+    if item.is_file():
+        print("File:", item.name)
+    elif item.is_dir():
+        print("Folder:", item.name)
+
+from pathlib import Path
+
+# choose current directory
+path = Path(".")
+# find all .txt files
+for file in path.rglob("*.txt"):
+    print(file)

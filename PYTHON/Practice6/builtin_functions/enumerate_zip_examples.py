@@ -1,22 +1,25 @@
-# 1
-names = ["Elzada","Saltanat","Aisulu","Aruzhan"]
-for i,j in enumerate(names):
-    print(f'N{i+1} - {j}')
-# 2
-meals = ["Spagetti","Plov","Borch","Beshparmak"]
-for i,j in enumerate(meals):
-    print(f'{i}_{j}')
-# 3
-animals = ["Tiger","Lion","Bird","Eagle"]
-for i,j in enumerate(animals):
-    print(f'{i}:{j}')
-# 4
-subject = ["Linear algebra","Calculus","Pp","Physic"]
-points = [24.5,21,27,30]
-for item in zip(subject,points):
-    print(f'{item[0]} - {item[1]}')
-# 5
-capital = ['Sydney','Amsterdam','Praga','Helsinki']
-country = ["Australia","Netherlands","Czech Republic","Finland"]
-for items in zip(capital,country):
-    print(f'{items[0]} - {items[1]}')
+# enumerate() gives index and value from a list
+names = ["Ali", "Dana", "Miras"]
+for index, name in enumerate(names):
+    print(index, name)
+
+# enumerate() can start counting from any number
+subjects = ["Math", "Python", "Physics"]
+for number, subject in enumerate(subjects, start=1):
+    print(number, subject)
+
+# zip() combines two lists together
+names = ["Ali", "Dana", "Miras"]
+scores = [85, 90, 78]
+for name, score in zip(names, scores):
+    print(name, score)
+
+# type() shows the data type
+# isinstance() checks the data type
+
+x = 25
+name = "Python"
+print(type(x))
+print(type(name))
+print(isinstance(x, int))
+print(isinstance(name, str))
